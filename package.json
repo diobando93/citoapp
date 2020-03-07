@@ -1,0 +1,22 @@
+{
+  "name": "citoapp",
+  "version": "1.0.0",
+  "description": "Aplicación de escritorio para laboratorios de citologia",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diobando93/citoapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diobando93/citoapp/issues"
+  },
+  "homepage": "https://github.com/diobando93/citoapp#readme",
+  "dependencies": {
+    "electron": "^5.0.4"
+  }
+}
