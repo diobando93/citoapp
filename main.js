@@ -4,8 +4,8 @@ let win
 const {app, BrowserWindow} = electron
 app.on('ready', ()=>{
     win = new BrowserWindow({
-        height : 500,
-        width: 400,
+        height : 1000,
+        width: 1000,
         webPreferences : {
             nodeIntegration: true
         }

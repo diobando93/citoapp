@@ -7,32 +7,70 @@
     <link rel="stylesheet" href="../statics/style.css" />
     <title>Laboratorios Citología</title>
   </head>
-<body>
-    <div id="mySidebar" class="sidebar">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a href="#">Producción</a>
-      <a href="#">Seguimiento</a>
-      <a href="#">Estadísticas</a>
-      <a href="#">Contact</a>
+  <body>
+    <div class="sidenav">
+      <button class="dropdown-btn">Producción
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Pedidos</a>
+        <a href="#">Resultados</a>
+        <a href="#">Retiro de informes</a>
+      </div>
+      <button class="dropdown-btn">Reportes
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Pedidos</a>
+        <a href="#">Resultados</a>
+        <a href="#">Historicos</a>
+      </div>
+      <button class="dropdown-btn">Seguimiento
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Pacientes</a>
+        <a href="#">Doctores</a>
+      </div>
+      <button class="dropdown-btn">Correlaciones
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Citología</a>
+        <a href="#">Controles posteriores</a>
+      </div>
+      <button class="dropdown-btn">Estadísticas
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">General</a>
+        <a href="#">Otros</a>
+      </div>
     </div>
 
-    <div id="main">
-      <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
-      <h2>Collapsed Sidebar</h2>
-      <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+    <div class="main">
+      <h2>Sidebar Dropdown</h2>
+      <p>Click on the dropdown button to open the dropdown menu inside the side navigation.</p>
+      <p>This sidebar is of full height (100%) and always shown.</p>
+      <p>Some random text..</p>
     </div>
 
-    <script>
-    function openNav() {
-      document.getElementById("mySidebar").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-    }
+  <script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
 
-    function closeNav() {
-      document.getElementById("mySidebar").style.width = "0";
-      document.getElementById("main").style.marginLeft= "0";
-    }
-    </script>
-
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+      } else {
+          dropdownContent.style.display = "block";
+      }
+      });
+}
+</script>
 </body>
 </html>
