@@ -1,1 +1,38 @@
-<h1>Music App</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../statics/style.css" />
+    <title>Laboratorios Citología</title>
+  </head>
+<body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="#">Producción</a>
+      <a href="#">Seguimiento</a>
+      <a href="#">Estadísticas</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+      <h2>Collapsed Sidebar</h2>
+      <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+    </div>
+
+    <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
+
+</body>
+</html>
