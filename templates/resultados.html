@@ -113,12 +113,20 @@
         </div>
       </div>
       <div class="row">
-        <input type="submit" value="Submit">
+        <input type="button" value="Consultar" onclick="imprime()">
       </div>
       <div class="row">
          <a href="index.html">Regresar</a>
       </div>
     </form>
   </div>
+  <script>
+      const electron = require('electron')
+      const {ipcRenderer} = electron
+      function imprime(){
+          registro = 1
+          ipcRenderer.send('query', registro)
+      }
+  </script>
 </body>
 </html>

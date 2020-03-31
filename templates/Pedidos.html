@@ -95,6 +95,53 @@
       <div class="row">
          <a href="index.html">Regresar</a>
       </div>
+      <div class="row">
+        <input type="button" value="Grabar" onclick="imprime()">
+      </div>
+      <script>
+        const electron = require('electron')
+        const {ipcRenderer} = electron
+            let cedula1 = document.querySelector(".col-75 input[name='Cedu']")
+            var cedula = 's'
+            //cedula = parseInt(cedula, 10)
+            //console.log(typeof(cedula))
+            let nombres = document.querySelector(".col-75 input[name='Nombres']")
+            let apellidos = document.querySelector(".col-75 input[name='Apellidos']")
+            let edad = document.querySelector(".col-75 input[name='edad']")
+            edad = parseInt(edad, 10)
+            let pais = document.querySelector(".col-75 input[name='pais']")
+            let provincia = document.querySelector(".col-75 input[name='provincia']")
+            let canton = document.querySelector(".col-75 input[name='canton']")
+            let parroquia = document.querySelector(".col-75 input[name='parroquia']")
+            let ciudad = document.querySelector(".col-75 input[name='ciudad']")
+            let sector = document.querySelector(".col-75 input[name='sector']")
+            var registro = new Array();
+            function imprime(){
+
+                console.log(typeof(cedula1.value))
+                cedula =cedula1.value
+                console.log(cedula)
+                console.log(typeof(cedula.value))
+                console.log(isNaN(cedula))
+                //Number(cedula)
+                //console.log(typeof(cedula.value))
+                registro.push(cedula1.value)
+                registro.push(nombres.value)
+                registro.push(apellidos.value)
+                registro.push(edad.value)
+                registro.push(pais.value)
+                registro.push(provincia.value)
+                registro.push(canton.value)
+                registro.push(parroquia.value)
+                registro.push(ciudad.value)
+                registro.push(sector.value)
+                //for(var i in registro) {
+                //    console.log(registro[i]); // elemento actual
+                //}
+                ipcRenderer.send('save', registro)
+            }
+
+    </script>
     </form>
   </div>
 </body>

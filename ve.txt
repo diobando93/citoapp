@@ -1,0 +1,1 @@
+. /home/israel/.local/share/virtualenvs/citoapp-gjx-862q/bin/activate
