@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/diobando93/citoapp#readme",
   "dependencies": {
-    "electron": "^5.0.4",
+    "electron": "^11.5.0",
     "pg": "^7.18.2",
     "sequelize": "^5.21.5"
   }
